@@ -263,12 +263,33 @@
 
 // console.log('123');
 
-let meraPromise = new Promise(function(resolve , reject){
-    setTimeout( function() {
-    console.log('run');
-}, 3000);
-   reject(900);
-});
-meraPromise.then((value) => {console.log(value)});
-meraPromise.catch((error) => { console.log(error)});
-console.log('start'); 
+// let meraPromise = new Promise(function(resolve , reject){
+//     setTimeout( function() {
+//     console.log('run');
+// }, 3000);
+//    reject(900);
+// });
+// meraPromise.then((value) => {console.log(value)});
+// meraPromise.catch((error) => { console.log(error)});
+// console.log('start');  
+
+let waadaa1 = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        console.log('time out1');
+
+    } , 2000);
+
+    resolve(true);
+})
+waadaa1.then(() => {
+let waadaa2 = new Promise(function(resolve , reject){
+    setTimeout(function(){
+        console.log('time out 2');
+    } , 3000);
+
+    console.log('chal hi gaya akhir kaar');
+
+})
+return waadaa2;
+}).then((value) => console.log(value));
+
