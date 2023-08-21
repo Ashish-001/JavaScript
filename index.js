@@ -267,6 +267,8 @@ let meraPromise = new Promise(function(resolve , reject){
     setTimeout( function() {
     console.log('run');
 }, 3000);
-    reject(1998);
-})
-console.log('start');
+   reject(900);
+});
+meraPromise.then((value) => {console.log(value)});
+meraPromise.catch((error) => { console.log(error)});
+console.log('start'); 
