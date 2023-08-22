@@ -273,23 +273,69 @@
 // meraPromise.catch((error) => { console.log(error)});
 // console.log('start');  
 
-let waadaa1 = new Promise(function(resolve, reject){
-    setTimeout(function(){
-        console.log('time out1');
+// let waadaa1 = new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//         console.log('time out1');
 
-    } , 2000);
+//     } , 2000);
 
-    resolve(true);
-})
-waadaa1.then(() => {
-let waadaa2 = new Promise(function(resolve , reject){
-    setTimeout(function(){
-        console.log('time out 2');
-    } , 3000);
+//     resolve(true);
+// })
+// waadaa1.then(() => {
+// let waadaa2 = new Promise(function(resolve , reject){
+//     setTimeout(function(){
+//         console.log('time out 2');
+//     } , 3000);
 
-    console.log('chal hi gaya akhir kaar');
+//     console.log('chal hi gaya akhir kaar');
 
-})
-return waadaa2;
-}).then((value) => console.log(value));
+// })
+// return waadaa2;
+// }).then((value) => console.log(value));
+
+// async function abc(){
+//     return 7;
+// }
+// async function utility() {
+// let haryana = new Promise(function (resolve , reject){
+//     setTimeout(function(){
+//         console.log('cool');
+//     } , 10000);
+// });
+
+// let goa = new Promise(function(resolve , reject){
+//     setTimeout(function(){
+//         console.log('hot');
+//     }, 20000);
+// });
+
+// let dm = haryana;
+// let pm = goa;
+
+// return[dm , pm];
+// }
+
+
+// get call
+// let obj = {
+//     heading: "head"
+//     };
+// async function utility(){
+//     let content = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+//     let output = await content.json();
+//     console.log(output);
+
+// }
+
+
+// utility();
+
+// modules
+
+const hello = () => {
+    console.log('hello');
+}
+
+module.exports = hello;
+
 
